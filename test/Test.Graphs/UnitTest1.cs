@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test.Base
+namespace Test.Graphs
 {
     [TestClass]
     public class UnitTest1

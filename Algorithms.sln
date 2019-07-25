@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Base", "test\Test.Base\Test.Base.csproj", "{3F05C155-A8AC-46A2-AB78-B6A963CFD4D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Base", "test\Test.Base\Test.Base.csproj", "{3F05C155-A8AC-46A2-AB78-B6A963CFD4D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C20E36DD-66FB-40CE-A8D7-F81EE0B61F17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StardustDL.Algorithms.Core", "src\StardustDL.Algorithms.Core\StardustDL.Algorithms.Core.csproj", "{C9B20237-3DDA-4375-867E-6F676DF0648C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StardustDL.Algorithms.Core", "src\StardustDL.Algorithms.Core\StardustDL.Algorithms.Core.csproj", "{C9B20237-3DDA-4375-867E-6F676DF0648C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StardustDL.Algorithms.Graphs", "src\StardustDL.Algorithms.Graphs\StardustDL.Algorithms.Graphs.csproj", "{CFD06A00-5158-4389-9616-7A049816F710}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StardustDL.Algorithms.Sequences", "src\StardustDL.Algorithms.Sequences\StardustDL.Algorithms.Sequences.csproj", "{608B5188-DF1E-4986-A182-BB87882BA968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Core", "test\Test.Core\Test.Core.csproj", "{D32A9537-D9C8-4DDA-8F1D-094F10D4AC38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Graphs", "test\Test.Graphs\Test.Graphs.csproj", "{AC6CD2A6-9764-40B1-90CF-0FC031DA854D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Sequences", "test\Test.Sequences\Test.Sequences.csproj", "{FFBD1CA5-A538-4AA5-ACB8-A4193CFF8340}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +33,35 @@ Global
 		{C9B20237-3DDA-4375-867E-6F676DF0648C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B20237-3DDA-4375-867E-6F676DF0648C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9B20237-3DDA-4375-867E-6F676DF0648C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD06A00-5158-4389-9616-7A049816F710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD06A00-5158-4389-9616-7A049816F710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD06A00-5158-4389-9616-7A049816F710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD06A00-5158-4389-9616-7A049816F710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608B5188-DF1E-4986-A182-BB87882BA968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608B5188-DF1E-4986-A182-BB87882BA968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608B5188-DF1E-4986-A182-BB87882BA968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608B5188-DF1E-4986-A182-BB87882BA968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D32A9537-D9C8-4DDA-8F1D-094F10D4AC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32A9537-D9C8-4DDA-8F1D-094F10D4AC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32A9537-D9C8-4DDA-8F1D-094F10D4AC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32A9537-D9C8-4DDA-8F1D-094F10D4AC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC6CD2A6-9764-40B1-90CF-0FC031DA854D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6CD2A6-9764-40B1-90CF-0FC031DA854D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6CD2A6-9764-40B1-90CF-0FC031DA854D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6CD2A6-9764-40B1-90CF-0FC031DA854D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFBD1CA5-A538-4AA5-ACB8-A4193CFF8340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFBD1CA5-A538-4AA5-ACB8-A4193CFF8340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFBD1CA5-A538-4AA5-ACB8-A4193CFF8340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFBD1CA5-A538-4AA5-ACB8-A4193CFF8340}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3F05C155-A8AC-46A2-AB78-B6A963CFD4D8} = {C20E36DD-66FB-40CE-A8D7-F81EE0B61F17}
+		{D32A9537-D9C8-4DDA-8F1D-094F10D4AC38} = {C20E36DD-66FB-40CE-A8D7-F81EE0B61F17}
+		{AC6CD2A6-9764-40B1-90CF-0FC031DA854D} = {C20E36DD-66FB-40CE-A8D7-F81EE0B61F17}
+		{FFBD1CA5-A538-4AA5-ACB8-A4193CFF8340} = {C20E36DD-66FB-40CE-A8D7-F81EE0B61F17}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {011BF696-C608-41CE-B9E4-785060AE1BA0}
