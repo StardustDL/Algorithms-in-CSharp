@@ -21,6 +21,9 @@ namespace Test.Core
                 Assert.AreEqual(x <= y, comparer.SmallerEqual(x, y));
                 Assert.AreEqual(x > y, comparer.Larger(x, y));
                 Assert.AreEqual(x >= y, comparer.LargerEqual(x, y));
+                Assert.AreEqual(x == y, comparer.Equal(x, y));
+                Assert.AreEqual(Math.Min(x, y), comparer.Min(x, y));
+                Assert.AreEqual(Math.Max(x, y), comparer.Max(x, y));
             }
         }
 

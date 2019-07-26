@@ -20,13 +20,5 @@ namespace StardustDL.Algorithms
         {
             TValue t = dict[a]; dict[a] = dict[b]; dict[b] = t;
         }
-
-        public static void Repeat(Action action, int n)
-        {
-            for (int i = 0; i < n; i++)
-            {
-                action();
-            }
-        }
     }
 }

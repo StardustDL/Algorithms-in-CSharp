@@ -9,9 +9,9 @@ jobs:
       filter_secrets: false
       install:
         - choco install dotnetcore-sdk --pre
-        - dotnet --version
-      script: 
+      before_script:
         - dotnet build
+      script:
         - powershell -c "dotnet test /p:CollectCoverage=true /p:CoverletOutput=../../coverage.json /p:MergeWith=../../coverage.json /maxcpucount:1"
       after_success:
         - powershell -c "dotnet test ./test/Test.Base /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../../coverage.xml /p:MergeWith=../../coverage.json /maxcpucount:1"
