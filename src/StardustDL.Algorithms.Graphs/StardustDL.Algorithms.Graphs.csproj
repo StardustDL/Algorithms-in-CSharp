@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StardustDL.Algorithms.Collections\StardustDL.Algorithms.Collections.csproj" />
+  </ItemGroup>
+
 </Project>

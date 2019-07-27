@@ -12,9 +12,12 @@ namespace StardustDL.Algorithms.Collections
             {
                 Value = value;
                 Parent = parent ?? this;
+                Rank = 0;
             }
 
-            public TValue Value { get; set; }
+            public TValue Value { get; }
+
+            public int Rank { get; set; }
 
             public DisjointSetNode<TValue> Parent { get; set; }
         }
@@ -27,7 +30,12 @@ namespace StardustDL.Algorithms.Collections
 
         DisjointSetNode<T> GetParent(DisjointSetNode<T> item)
         {
-            while (item.Parent != item) item = item.Parent;
+            if(item.Parent != item)
+            {
+                var par = GetParent(item.Parent);
+                item.Parent = par;
+                return par;
+            }
             return item;
         }
 
@@ -35,7 +43,20 @@ namespace StardustDL.Algorithms.Collections
         {
             DisjointSetNode<T> _first = GetParent(Contents[first]);
             DisjointSetNode<T> _second = GetParent(Contents[second]);
-            _second.Parent = _first;
+            if(_first.Rank > _second.Rank)
+            {
+                _second.Parent = _first;
+            }
+            else if(_first.Rank < _second.Rank)
+            {
+                _first.Parent = _second;
+            }
+            else
+            {
+                _second.Parent = _first;
+                _first.Rank++;
+            }
+            
             Count--;
         }
 

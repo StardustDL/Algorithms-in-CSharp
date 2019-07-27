@@ -6,4 +6,6 @@
 
         TVertex To { get; }
     }
+
+    public delegate double WeightEdgeFunc<TVertex, in TEdge>(TEdge edge) where TEdge : IEdge<TVertex>;
 }

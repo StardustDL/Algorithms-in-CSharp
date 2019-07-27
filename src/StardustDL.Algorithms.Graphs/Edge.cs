@@ -1,4 +1,6 @@
-﻿namespace StardustDL.Algorithms.Graphs
+﻿using System;
+
+namespace StardustDL.Algorithms.Graphs
 {
     public class Edge<TVertex> : IEdge<TVertex>
     {
