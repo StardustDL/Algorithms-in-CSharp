@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\StardustDL.Algorithms.Collections\StardustDL.Algorithms.Collections.csproj" />
     <ProjectReference Include="..\..\src\StardustDL.Algorithms.Sequences\StardustDL.Algorithms.Sequences.csproj" />
   </ItemGroup>
 

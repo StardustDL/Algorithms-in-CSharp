@@ -3,6 +3,7 @@ using StardustDL.Algorithms.Sequences;
 using System;
 using System.Linq;
 using StardustDL.Algorithms;
+using StardustDL.Algorithms.Collections.Heaps;
 
 namespace Test.Sequences
 {
@@ -12,6 +13,8 @@ namespace Test.Sequences
         [DataTestMethod]
         [DataRow(typeof(Queue<int>))]
         [DataRow(typeof(Deque<int>))]
+        [DataRow(typeof(MonotoneQueue<int>))]
+        [DataRow(typeof(PriorityQueue<int>))]
         public void Generic(Type type)
         {
             IQueue<int> S = (IQueue<int>)Activator.CreateInstance(type);

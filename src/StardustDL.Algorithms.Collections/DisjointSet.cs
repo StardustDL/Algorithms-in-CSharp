@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace StardustDL.Algorithms.Collections
 {
-    public class DisjointSet<T> : IEnumerable<T>
+    public class DisjointSet<T> : IEnumerable<T> where T : notnull
     {
         class DisjointSetNode<TValue>
         {
-            public DisjointSetNode(TValue value, DisjointSetNode<TValue> parent = null)
+            public DisjointSetNode(TValue value, DisjointSetNode<TValue>? parent = null)
             {
                 Value = value;
                 Parent = parent ?? this;
@@ -30,7 +30,7 @@ namespace StardustDL.Algorithms.Collections
 
         DisjointSetNode<T> GetParent(DisjointSetNode<T> item)
         {
-            if(item.Parent != item)
+            if (item.Parent != item)
             {
                 var par = GetParent(item.Parent);
                 item.Parent = par;
@@ -43,11 +43,11 @@ namespace StardustDL.Algorithms.Collections
         {
             DisjointSetNode<T> _first = GetParent(Contents[first]);
             DisjointSetNode<T> _second = GetParent(Contents[second]);
-            if(_first.Rank > _second.Rank)
+            if (_first.Rank > _second.Rank)
             {
                 _second.Parent = _first;
             }
-            else if(_first.Rank < _second.Rank)
+            else if (_first.Rank < _second.Rank)
             {
                 _first.Parent = _second;
             }
@@ -56,7 +56,7 @@ namespace StardustDL.Algorithms.Collections
                 _second.Parent = _first;
                 _first.Rank++;
             }
-            
+
             Count--;
         }
 

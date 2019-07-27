@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StardustDL.Algorithms;
 using StardustDL.Algorithms.Collections;
+using StardustDL.Algorithms.Graphs;
 using System.Linq;
 
 namespace Test.Collections

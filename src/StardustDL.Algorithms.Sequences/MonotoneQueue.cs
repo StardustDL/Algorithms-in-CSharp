@@ -14,6 +14,8 @@ namespace StardustDL.Algorithms.Sequences
             this.comparer = comparer ?? Comparer<T>.Default;
         }
 
+        public MonotoneQueue() : this(null) { }
+
         public T Dequeue()
         {
             return queue.Dequeue();
