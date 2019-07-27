@@ -58,6 +58,7 @@ namespace StardustDL.Algorithms.Graphs
                 {
                     Data.Add(item.From, new List<TEdge>() { item });
                 }
+                Count++;
             }
 
             public void Clear()
@@ -87,14 +88,26 @@ namespace StardustDL.Algorithms.Graphs
             {
                 if (Data.TryGetValue(item.From, out var value))
                 {
-                    return value.Remove(item);
+                    if (value.Remove(item))
+                    {
+                        Count--;
+                        return true;
+                    }
                 }
                 return false;
             }
 
             public bool RemoveVertex(TVertex item)
             {
-                return Data.Remove(item);
+                if (Data.TryGetValue(item,out var value))
+                {
+                    if (Data.Remove(item))
+                    {
+                        Count -= value.Count;
+                        return true;
+                    }
+                }
+                return false;
             }
 
             public IEnumerable<TEdge> GetAdjacentEdges(TVertex item)
