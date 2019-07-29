@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using StardustDL.Algorithms.Sequences;
+using System.Collections.Generic;
 
 namespace StardustDL.Algorithms.Collections.Heaps
 {
-    public class BinaryHeap<T> : IHeap<T> where T : notnull
+    public class BinaryHeap<T> : IHeap<T>
     {
         private readonly IComparer<T> comparer;
-        private readonly List<T> Contents = new List<T>() { default };
+        private readonly OffsetList<T> Contents = new OffsetList<T>(1);
 
-        public int Count => Contents.Count - 1;
+        public int Count => Contents.Count;
 
         public void Clear()
         {
             Contents.Clear();
-            Contents.Add(default);
         }
 
         public void Push(in T value)
@@ -30,7 +30,7 @@ namespace StardustDL.Algorithms.Collections.Heaps
         {
             T res = Top;
             Utility.Swap(Contents, 1, Count);
-            Contents.RemoveAt(Contents.Count - 1);
+            Contents.RemoveAt(Contents.Count);
             if (!IsEmpty)
             {
                 T item = Contents[1];

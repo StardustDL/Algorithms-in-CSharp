@@ -42,13 +42,13 @@ namespace StardustDL.Algorithms.Collections.Heaps
 
         public T Pop()
         {
-            T r = Root.Value;
+            T r = Root!.Value;
             Root = Merge(Root.LeftChild, Root.RightChild);
             Count--;
             return r;
         }
 
-        public T Top => Root.Value;
+        public T Top => Root!.Value;
 
         public LeftistTree() : this(null) { }
 
